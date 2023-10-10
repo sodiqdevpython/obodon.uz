@@ -4,7 +4,6 @@
 *.pyc
 __pycache__
 db.sqlite3
-media
 
 # Backup files # 
 *.bak 
@@ -56,7 +55,6 @@ dist/
 downloads/ 
 eggs/ 
 .eggs/ 
-lib/ 
 lib64/ 
 parts/ 
 sdist/ 
