@@ -69,16 +69,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Asosiy</a>
-                    <a href="index.html" class="nav-item nav-link">Yangiliklar</a>
+                    <a href="{% url 'asosiy' %}" class="nav-item nav-link active">Asosiy</a>
+                    <a href="{% url 'xabarlar' %}" class="nav-item nav-link">Yangiliklar</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Viloyatlar</a>
                         <div class="dropdown-menu m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                            {% for viloyat1 in viloyat %}
+                                <a href="{% url 'xabarlar' %}" class="dropdown-item">{{ viloyat1.nomi }}</a>
+                            {% endfor %}
                         </div>
                     </div>
-                    <a href="about.html" class="nav-item nav-link">Qatnashuvchilar</a>
+                    <a href="about.html" class="nav-item nav-link">Valantyorlar</a>
                 </div>
                 <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
                 {% comment %} <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a> {% endcomment %}
@@ -119,7 +120,7 @@
                             <div class="link-animated d-flex flex-column justify-content-start">
                                 <a class="text-light mb-2" href="https://obb.uz/page/view?id=9#"><i class="bi bi-arrow-right text-primary me-2"></i>Obodonlashtirish bosh boshqarmasi buyruqlari</a>
                                 <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Asosiy sahifa</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Yangiliklar</a>
+                                <a class="text-light mb-2" href="{% url 'xabarlar' %}"><i class="bi bi-arrow-right text-primary me-2"></i>Yangiliklar</a>
                                 <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Qatnashuvchilar</a>
                             </div>
                         </div>

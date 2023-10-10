@@ -10,7 +10,7 @@
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 900px;">
                                     <p class="lead text-white animated zoomIn">{{ i.sarlavha }}</p>
-                                    <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Yangilikni o'qish</a>
+                                    <a href="{% url 'detail' i.slug %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Yangilikni o'qish</a>
                                 </div>
                             </div>
                         </div>
@@ -20,7 +20,7 @@
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 900px;">
                                     <p class="lead text-white animated zoomIn">{{ i.sarlavha }}</p>
-                                    <a href="quote.html" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Yangilikni o'qish</a>
+                                    <a href="{% url 'detail' i.slug %}" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Yangilikni o'qish</a>
                                 </div>
                             </div>
                         </div>
