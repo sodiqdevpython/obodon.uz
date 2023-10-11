@@ -79,9 +79,8 @@
                             {% endfor %}
                         </div>
                     </div>
-                    <a href="about.html" class="nav-item nav-link">Valantyorlar</a>
+                    <a href="{% url 'val' %}" class="nav-item nav-link">Valantyorlar</a>
                 </div>
-                <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
                 {% comment %} <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a> {% endcomment %}
             </div>
         </nav>
@@ -121,7 +120,7 @@
                                 <a class="text-light mb-2" href="https://obb.uz/page/view?id=9#"><i class="bi bi-arrow-right text-primary me-2"></i>Obodonlashtirish bosh boshqarmasi buyruqlari</a>
                                 <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Asosiy sahifa</a>
                                 <a class="text-light mb-2" href="{% url 'xabarlar' %}"><i class="bi bi-arrow-right text-primary me-2"></i>Yangiliklar</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Qatnashuvchilar</a>
+                                <a class="text-light mb-2" href="{% url 'val' %}"><i class="bi bi-arrow-right text-primary me-2"></i>Qatnashuvchilar</a>
                             </div>
                         </div>
                     </div>
